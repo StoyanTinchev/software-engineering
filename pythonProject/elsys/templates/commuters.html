@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "navigation.html" %}
+<table>
+    <tr>
+        <th>Time:</th>
+        <th>Destination:</th>
+        <th>Train:</th>
+        <th>Status:</th>
+    </tr>
+    {% for item in info %}
+        <tr>
+            <th>{{ item.m_time }}</th>
+            <th>{{ item.m_destination }}</th>
+            <th>{{ item.m_train }}</th>
+            <th>{{ item.m_status }}</th>
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "navigation.html" %}
+<table>
+    <tr>
+        <th>Color:</th>
+        <th>Brand:</th>
+        <th>Description:</th>
+        <th>Year of production:</th>
+        <th>Horse Power:</th>
+    </tr>
+    {% for car in cars %}
+        <tr>
+            <th>{{ car.color }}</th>
+            <th>{{ car.brand }}</th>
+            <th>{{ car.description }}</th>
+            <th>{{ car.year_production }}</th>
+            <th>{{ car.hp }}</th>
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
